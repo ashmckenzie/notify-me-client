@@ -19,6 +19,14 @@ module NotifyMeClient
       response.code.to_i
     end
 
+    def messages
+      body['messages']
+    end
+
+    def took
+      body['took']
+    end
+
     def body
       JSON.parse(response.body)
     end
